@@ -11,4 +11,6 @@ fi
 cd foodnemo
 git pull
 
-pip install -r requirements
+pip install -r deploy/requirements
+
+mkdir -p raw static
