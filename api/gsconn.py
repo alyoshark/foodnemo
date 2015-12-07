@@ -10,13 +10,16 @@ def order_writer():
 
     def init_conn():
         conns['credentials'] = SignedJwtAssertionCredentials(
-            JSON_KEY['client_email'],
-            JSON_KEY['private_key'],
+            config.JSON_KEY['client_email'],
+            config.JSON_KEY['private_key'],
             config.GOAUTHSCOPE,
         )
         conns['reader'] = gspread.authorize(conns['credentials'])
         conns['book'] = conns['reader'].open_by_key(config.TEST_BOOKID)
-        conns['sheet'] = conns['book'].worksheet(config.SHEET)
+        try:
+            conns['sheet'] = conns['book'].worksheet(config.SHEET)
+        except gspread.exceptions.WorksheetNotFound:
+            conns['sheet'] = conns['book'].add_worksheet(config.SHEET, 100000, 10)
 
     # @retry(wait_exponential_multiplier=1000, wait_exponential_max=1000000)
     def dump_order(order_list):
@@ -25,7 +28,7 @@ def order_writer():
             if ids:
                 maxid = max(ids)
             else:
-                ids = 0
+                maxid = 0
             for idx, order in enumerate(order_list):
                 order_id = idx + maxid + 1
                 write_order(order_id, order)

@@ -1,4 +1,5 @@
 import json
+import logging
 import datetime as dt
 
 DATESTR = dt.date.today().strftime('%Y%m%d')

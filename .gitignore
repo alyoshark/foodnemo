@@ -1,4 +1,6 @@
-fn-dev-015c422fd6c5.json
+api/fn-dev-015c422fd6c5.json
+.DS_Store
+assets/node_modules/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

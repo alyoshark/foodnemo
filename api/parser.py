@@ -1,3 +1,6 @@
+from __future__ import print_function
+
+import json
 import signal
 import logging
 import traceback
@@ -23,7 +26,7 @@ def parse_order(line):
     dish = data['dish']
     location = data['location']
     phone = int(data['phone'])
-    return tuple(dish, location, phone)
+    return (dish, location, phone)
 
 
 def populate_data(f):
@@ -45,7 +48,7 @@ def populate_data(f):
 def main(file_log, loc_log, pid_log):
     SIG_MARK = Value('i', False)  # "Mutex-ish" global variable
     open(pid_log, 'w').write(str(getpid()))
-    # dump_order = order_writer()
+    dump_order = order_writer()
 
     def worker(mark):
         try:
@@ -56,8 +59,8 @@ def main(file_log, loc_log, pid_log):
         f.seek(position)
         while True:
             order_list = populate_data(f)
-            # error = dump_order(order_list)
-            error = print order_list
+            error = dump_order(order_list)
+            # error = print(order_list)
             if error:  # On error, rewind the file descriptor
                 f.seek(position)
             else:      # Otherwise, proceed and update the log
