@@ -1,0 +1,46 @@
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+body {
+    background-color: #966F33;
+    color: #BBBBBB;
+}
+
+p {
+}
+
+.dish-count {
+    width: 2.5em;
+    height: 2.5em;
+}
+
+.chasiew-preview {
+    background-image: url("http://s3.burpple.com/foods/3501e34cac074bf7a090555_original.?1347263994");
+    background-size: 100%;
+    width: 16em;
+    height: 16em;
+    margin-bottom: 0.7em;
+    display: block;
+}
+
+.cost {
+    font-size: 1.5em;
+    margin-right: 1.2em;
+    border-top: 0.2em;
+}
+
+.summary {
+    margin-top: 1em;
+}
+
+#order-detail {
+    position: relative;
+    margin-top: 1em;
+}
+
+#order-choice {
+    display: none;
+}
