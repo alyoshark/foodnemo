@@ -30,117 +30,141 @@
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container fn-nav">
         <div class="navbar-header">
-          <a class="navbar-brand" href="#">FoodNemo</a>
+          <a class="pull-left" href="#">
+            <img src='/img/foodnemo-white.png'>
+          </a>
         </div>
         <h3 class="slogan">Best Food in Singapore Delivered to You</h3>
       </div>
     </nav>
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="container">
-    </div>
 
-    <div class="container" id="order-choice">
+    <div class="container main-content" id="order-choice">
       <div class="row">
         <div class="dish-preview col-xs-offset-3 col-xs-6 col-md-offset-0 col-md-4">
-          <div class="chasiew-preview"><h3>Cha Siew Rice</h3></div>
+          <div class="dish-pic normal">
+            <span class="dish-name">Lu Rou Fan</span>
+          </div>
           <div class="quantity-line row">
               <span class="price col-xs-6">Only $4!</span>
               <div class="col-xs-6">
                   <a class="btn" href="#" role="button">–</a>
-                  <input type="number" placeholder="0" class="dish-count">
+                  <input type="number" value="0" class="dish-count">
                   <a class="btn" href="#" role="button">+</a>
               </div>
           </div>
         </div>
         <div class="dish-preview col-xs-offset-3 col-xs-6 col-md-offset-0 col-md-4">
-          <div class="chasiew-preview"><h3>Cha Siew Rice</h3></div>
+          <div class="dish-pic halal">
+            <span class="dish-name">Penyet Wing Set</span>
+            <span class="dish-type">Halal</span>
+          </div>
           <div class="quantity-line row">
               <span class="price col-xs-6">Only $4!</span>
               <div class="col-xs-6">
                   <a class="btn" href="#" role="button">–</a>
-                  <input type="number" placeholder="0" class="dish-count">
+                  <input type="number" value="0" class="dish-count">
                   <a class="btn" href="#" role="button">+</a>
               </div>
           </div>
         </div>
         <div class="dish-preview col-xs-offset-3 col-xs-6 col-md-offset-0 col-md-4">
-          <div class="chasiew-preview"><h3>Cha Siew Rice</h3></div>
+          <div class="dish-pic vegie">
+            <span class="dish-name">Vegan Noodles</span>
+            <span class="dish-type">Vegie</span>
+          </div>
           <div class="quantity-line row">
-              <span class="price col-xs-6">Only $4!</span>
+              <span class="price col-xs-6">Only $3.5!</span>
               <div class="col-xs-6">
                   <a class="btn" href="#" role="button">–</a>
-                  <input type="number" placeholder="0" class="dish-count">
+                  <input type="number" value="0" class="dish-count">
                   <a class="btn" href="#" role="button">+</a>
               </div>
           </div>
         </div>
       </div>
-      <div class="row summary">
+      <div class="row order-done">
         <div class="col-xs-offset-3 col-xs-8 col-md-offset-0 col-md-8">
-          <span class="total-cost">Total: 0 SGD</span>
-          <button class="btn btn-success">Next</button>
+          <!--span class="total-cost">Total: 0 SGD</span-->
+          <button class="btn btn-danger">ORDER</button>
         </div>
       </div>
     </div> <!-- /container -->
 
 
-    <div class="container" id="contact-detail">
-      <form class="form-horizontal">
-      <fieldset>
-      
-      <!-- Form Name -->
-      
-      <div class="form-group">
-        <label class="col-md-4 control-label" for="name">Name</label>  
-        <div class="col-md-4">
-        <input id="name" name="name" type="text" placeholder="How may we address you?" class="form-control input-md" required="">
+    <div class="container main-content">
+      <div class="row" id="contact-detail">
+        <form class="form-horizontal col-md-7 col-xs-12">
+        <fieldset>
+        
+        <!-- Form Name -->
+        
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="name">Name</label>  
+          <div class="col-md-8">
+          <input id="name" name="name" type="text" placeholder="How may we address you?" class="form-control input-lg" required="">
+          </div>
         </div>
-      </div>
-      
-      <div class="form-group">
-        <label class="col-md-4 control-label" for="zip-code">Zip Code</label>
-        <div class="col-md-4">
-          <input id="zip-code" name="zip-code" type="password" placeholder="Zip Code" class="form-control input-md" required="">
+        
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="zip-code">Zip Code</label>
+          <div class="col-md-8">
+            <input id="zip-code" name="zip-code" type="password" placeholder="Zip Code" class="form-control input-lg" required="">
+          </div>
         </div>
-      </div>
-      
-      <div class="form-group">
-        <label class="col-md-4 control-label" for="location">Location</label>
-        <div class="col-md-4">
-          <input id="location" name="location" type="search" placeholder="Delivery location, as specific as possible" class="form-control input-md" required="">
+        
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="location">Location</label>
+          <div class="col-md-8">
+            <input id="location" name="location" type="search" placeholder="Delivery location, as specific as possible" class="form-control input-lg" required="">
+          </div>
         </div>
-      </div>
-      
-      <div class="form-group">
-        <label class="col-md-4 control-label" for="Delivery Time">Delivery Time</label>
-        <div class="col-md-4"> 
-          <label class="radio-inline" for="Delivery Time-0">
-            <input type="radio" name="Delivery Time" id="slot0" value="0" checked="checked">12 to 1
-          </label> 
-          <label class="radio-inline" for="slot1">
-            <input type="radio" name="Delivery Time" id="Delivery Time-1" value="1">1 to 2
-          </label>
+        
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="Delivery Time">Delivery Time</label>
+          <div class="col-md-8"> 
+            <label class="radio-inline" for="Delivery Time-0">
+              <input type="radio" name="Delivery Time" id="slot0" value="0" checked="checked">12 pm to 1 pm
+            </label> 
+            <label class="radio-inline" for="slot1">
+              <input type="radio" name="Delivery Time" id="Delivery Time-1" value="1">1 pm to 2 pm
+            </label>
+          </div>
         </div>
-      </div>
 
-      <div class="form-group">
-        <label class="col-md-4 control-label" for="remark">Remark</label>
-        <div class="col-md-4">
-          <textarea class="form-control" id="remark" name="remark" placeholder="Any extra info we need to take note of?"></textarea>
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="remark">Remark</label>
+          <div class="col-md-8">
+            <textarea class="form-control" id="remark" name="remark" placeholder="Any extra info we need to take note of?"></textarea>
+          </div>
         </div>
-      </div>
 
-      <div class="form-group">
-        <label class="col-md-4 control-label" for=""></label>
-        <div class="col-md-4"> 
-          <button type="submit" class="btn btn-success">Submit</button>
+        <div class="form-group">
+          <label class="col-md-4 control-label" for=""></label>
+          <div class="col-md-8 order-done"> 
+            <button type="submit" class="btn btn-danger">Submit</button>
+          </div>
         </div>
-      </div>
       
       </fieldset>
       </form>
 
+      <div class="order-summary col-md-5 col-xs-12">
+        <h3>Your Order</h3>
+        <div class="order-detail">
+          <p>
+            <span>1 x Lu Rou Fan</span>
+            <span class="pull-right">$4</span>
+          </p>
+          <p>
+            <span>2 x Penyet Wing Set</span>
+            <span class="pull-right">$8</span>
+          </p>
+          <hr>
+          <p class="pull-right">Total: $12</p>
+        </div>
+      </div>
 
     </div> <!-- /container -->
 

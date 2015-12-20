@@ -5,11 +5,13 @@
    ========================================================================== */
 
 body {
-    background-color: #966F33;
-    color: #BBBBBB;
+    background-image: url('/img/background.png');
+    background-size: 100%;
+    color: white;
 }
 
-p {
+.main-content {
+    margin-top: 2em;
 }
 
 .dish-count {
@@ -17,33 +19,76 @@ p {
     height: 2.5em;
 }
 
-.chasiew-preview {
-    background-image: url("http://s3.burpple.com/foods/3501e34cac074bf7a090555_original.?1347263994");
-    background-size: 100%;
+.dish-pic {
     width: 22em;
     height: 22em;
+    border-top: 7em;
     margin-bottom: 0.7em;
     display: block;
+    position: relative;
 }
+
+.dish-preview .dish-name {
+    background: #986124;
+    font-size: 1.4em;
+    font-weight: 900;
+    color: #EEEEEE;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 6px;
+}
+
+.dish-preview .dish-type {
+    font-size: 1.5em;
+    font-weight: 900;
+    color: #FFFFFF;
+    background: #C12E2A;
+    font-style: italic;
+    position: absolute;
+    right: 0;
+    padding: 5px;
+}
+
+.normal {
+    background-image: url('/img/luroufan.png');
+    background-size: 100%;
+}
+.halal {
+    background-image: url('/img/penyet-wing.png');
+    background-size: 100%;
+}
+.vegie {
+    background-image: url('/img/vegan-noodle.png');
+    background-size: 100%;
+}
+
 
 .total-cost {
     font-size: 1.5em;
     margin-right: 1.2em;
     border-top: 0.2em;
+    font-weight: 900;
 }
 
-.summary {
+.order-done {
     margin-top: 1em;
+}
+
+.order-done button {
+    font-weight: 900;
+    font-size: 1.5em;
+    padding: 10px;
 }
 
 #contact-detail {
     position: relative;
     margin-top: 1em;
-    display: none;
+    display: inherit;
 }
 
 #order-choice {
-    /* display: none; */
+    display: none;
 }
 
 .price {
@@ -58,7 +103,7 @@ p {
 .slogan {
     position: absolute;
     right: 1em;
-    bottom: 0.15em;
+    bottom: -5px;
 }
 
 .fn-nav {
@@ -71,7 +116,7 @@ p {
 
 .quantity-line a {
     font-size: 1.5em;
-    color: #BBBBBB;
+    color: white;
     font-weight: 900;
 }
 
@@ -83,6 +128,32 @@ p {
     height: 2em;
     border: none;
     text-align: center;
+}
+
+.form-group label {
+    font-size: 1.5em;
+    padding-bottom: 8px;
+}
+
+.order-summary {
+    font-size: 1.2em;
+    margin-top: -0.6em;
+}
+
+.order-summary
+h1, h2, h3, h4 {
+    text-align: center;
+    font-weight: 900;
+}
+
+.order-detail {
+    background: rgba(211, 211, 211, 0.5);
+    display: block;
+    color: white;
+    font-size: 1.2em;
+    font-weight: 900;
+    padding: 1em 1em 2.5em 1em;
+    border-radius: 5px;
 }
 
 input[type=number]::-webkit-inner-spin-button,
