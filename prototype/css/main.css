@@ -20,13 +20,13 @@ p {
 .chasiew-preview {
     background-image: url("http://s3.burpple.com/foods/3501e34cac074bf7a090555_original.?1347263994");
     background-size: 100%;
-    width: 16em;
-    height: 16em;
+    width: 22em;
+    height: 22em;
     margin-bottom: 0.7em;
     display: block;
 }
 
-.cost {
+.total-cost {
     font-size: 1.5em;
     margin-right: 1.2em;
     border-top: 0.2em;
@@ -36,11 +36,57 @@ p {
     margin-top: 1em;
 }
 
-#order-detail {
+#contact-detail {
     position: relative;
     margin-top: 1em;
+    display: none;
 }
 
 #order-choice {
-    display: none;
+    /* display: none; */
+}
+
+.price {
+    margin-top: 0.3em;
+    font-size: 1.5em;
+}
+
+.dish-preview {
+    position: relative;
+}
+
+.slogan {
+    position: absolute;
+    right: 1em;
+    bottom: 0.15em;
+}
+
+.fn-nav {
+    position: relative;
+}
+
+.quantity-line {
+    font-weight: 900;
+}
+
+.quantity-line a {
+    font-size: 1.5em;
+    color: #BBBBBB;
+    font-weight: 900;
+}
+
+.quantity-line input {
+    font-size: 1.2em;
+    color: red;
+    padding: 1px;
+    width: 2em;
+    height: 2em;
+    border: none;
+    text-align: center;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
