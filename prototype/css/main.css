@@ -87,6 +87,10 @@ body {
     display: none;
 }
 
+#contact-detail textarea {
+    font-size: 1.3em;
+}
+
 #order-choice {
     display: inherit;
 }
@@ -101,9 +105,11 @@ body {
 }
 
 .slogan {
-    position: absolute;
-    right: 1em;
-    bottom: -5px;
+    margin-top: 15px;
+}
+
+.trademark {
+    margin-top: 5px;
 }
 
 .fn-nav {
