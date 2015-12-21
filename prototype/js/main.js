@@ -60,17 +60,20 @@ $(function() {
                 slot = $('input[name="deliver-time"]:checked').val(),
                 remark = $('#remark').val();
             var contact = {
+                phone: phone,
                 name: name,
                 zipcode: zipcode,
                 location: location,
                 slot: slot,
                 remark: remark
             };
+            console.log(contact);
             if (validate_contact(contact)) {
                 order_detail.contact = contact;
+                console.log(order_detail);
                 $.post(
-                    '/test/',
-                    contact,
+                    'test/',
+                    order_detail,
                     function() {
                         $('.contact-filled').html('&#10004;');
                     }
@@ -100,7 +103,7 @@ $(function() {
         if (dishes.length > 0) {
             $('#order-choice').hide();
             $('#contact-detail').show();
-            order_detail.dishes = dishes;
+            order_detail.dishes = dishes.get();
             gen_all(dishes);
         }
         return false;
