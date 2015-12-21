@@ -84,11 +84,11 @@ body {
 #contact-detail {
     position: relative;
     margin-top: 1em;
-    display: inherit;
+    display: none;
 }
 
 #order-choice {
-    display: none;
+    display: inherit;
 }
 
 .price {
