@@ -11,7 +11,7 @@ body {
 }
 
 .main-content {
-    margin-top: 2em;
+    margin-top: 6em;
 }
 
 .dish-count {
@@ -78,7 +78,8 @@ body {
 .order-done button {
     font-weight: 900;
     font-size: 1.5em;
-    padding: 10px;
+    padding: 10px 28px;
+    border-radius: 15px;
 }
 
 .order-done h2 {
@@ -86,8 +87,6 @@ body {
 }
 
 #contact-detail {
-    position: relative;
-    margin-top: 1em;
     display: none;
 }
 
@@ -114,10 +113,7 @@ body {
 
 .trademark {
     margin-top: 5px;
-}
-
-.fn-nav {
-    position: relative;
+    padding: 1em;
 }
 
 .quantity-line {
@@ -164,6 +160,45 @@ h1, h2, h3, h4 {
     font-weight: 900;
     padding: 1em 1em 2.5em 1em;
     border-radius: 5px;
+}
+
+.with-errors li {
+    color: darkred;
+    font-size: 1.2em;
+    padding-left: 1em;
+}
+
+.how-to {
+    margin-top: 1.5em;
+    font-size: 1.4em;
+    font-weight: 600;
+}
+
+.how-to h3 {
+    margin-left: -1.5em;
+}
+
+.how-to p {
+    margin-bottom: 0;
+}
+
+footer span, a {
+    color: white;
+}
+
+footer a:hover {
+    text-decoration: none;
+    color: gray;
+}
+
+footer {
+    margin-top: -0.7em;
+    font-size: 1.4em;
+    font-weight: 900;
+}
+
+#about-us p {
+    font-size: 1.2em;
 }
 
 input[type=number]::-webkit-inner-spin-button,

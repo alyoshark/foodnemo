@@ -22,11 +22,12 @@ $(function() {
         },
 
         gen_dish_summary = function() {
+            var subtotal = this.price.toFixed(2);
             var summary = '<p>' +
                 '<span>' +
                     this.count + ' x ' + this.name +
                 '</span>' +
-                '<span class="pull-right">$' + this.price + '</span>' +
+                '<span class="pull-right">$ ' + subtotal + '</span>' +
                 '</p>';
             return summary;
         },
@@ -35,7 +36,7 @@ $(function() {
             var all_summary = dishes.map(gen_dish_summary).get().join(' '),
                 total_sum = dishes.map(function() { return this.price; }).get().reduce(function(a, b) { return a + b; });
             $('.per-dish').html(all_summary);
-            $('.payable').html('Totoal: $' + total_sum);
+            $('.payable').html('Totoal: $ ' + total_sum.toFixed(2));
         },
 
         validate_field = function(obj, name, lo_bound, hi_bound) {
@@ -115,4 +116,9 @@ $(function() {
     });
 
     $('.order-done button').on('click', get_contact_detail);
+
+    $('.trademark').on('click', function() {
+        $('#contact-detail').hide();
+        $('#order-choice').show();
+    });
 })
