@@ -47,7 +47,7 @@ def order_writer():
 
     def write_order(order_id, order):
         conns['sheet'].update_cell(order_id, 1, order_id)
-        for col, val in zip(xrange(2, 5), order):
+        for col, val in zip(xrange(2, 9), order):
             conns['sheet'].update_cell(order_id, col, val)
 
     def order2email(order_list):

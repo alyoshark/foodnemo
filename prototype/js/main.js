@@ -71,15 +71,20 @@ $(function() {
             if (validate_contact(contact)) {
                 order_detail.contact = contact;
                 console.log(order_detail);
-                $.post(
-                    'test/',
-                    order_detail,
-                    function() {
-                        $('.contact-filled').html('&#10004;');
-                    }
-                );
+                $.ajax({
+                    type: 'POST',
+                    url: '/test/',
+                    data: JSON.stringify(order_detail),
+                    contentType: "application/json",
+                }).done(function() { // data, status, jq) {
+                    // console.log(data);
+                    $('.order-done').html('<h2 class="pulled-left">&#10004; Sent</h2>');
+                    alert("Thank you! You've successfully placed your order :)");
+                }).fail(function(jq, status) {
+                    console.log(jq, status);
+                    alert("Sorry, we are having some technical issues, please come back in a while");
+                });
             }
-            return false;
         };
 
     $('.plus1').on('click', function() {
@@ -109,5 +114,5 @@ $(function() {
         return false;
     });
 
-    $('.contact-filled').on('click', get_contact_detail);
+    $('.order-done button').on('click', get_contact_detail);
 })

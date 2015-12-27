@@ -3,10 +3,12 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 cd $DIR/../raw
 
-test_rot=test-order.json-`date +'%Y%m%d' -d'yesterday'`
+date_suffix=`date -v-1d +'%Y%m%d'`
+
+test_rot=test-order.json-$date_suffix
 mv test-order.json $test_rot
 
-prod_rot=order.json-`date +'%Y%m%d' -d'yesterday'`
+prod_rot=order.json-$date_suffix
 mv order.json $prod_rot
 
 kill -USR1 `cat /usr/local/openresty/nginx/logs/nginx.pid`

@@ -21,10 +21,18 @@ logging.basicConfig(
 
 def parse_order(line):
     data = json.loads(line.decode('string_escape'))
-    dish = data['dish']
-    location = data['location']
-    phone = int(data['phone'])
-    return (dish, location, phone)
+    dishes = ', '.join(
+        '%s: (%d - %f)' % (i['name'], i['count'], i['price'])
+        for i in data['dishes']
+    )
+    contact = data['contact']
+    phone = int(contact['phone'])
+    slot = int(contact['slot'])
+    zipcode = int(contact['zipcode'])
+    name = contact['name']
+    location = contact['location']
+    remark = contact['remark']
+    return (phone, slot, zipcode, name, location, remark, dishes)
 
 
 def populate_data(f):
@@ -38,6 +46,8 @@ def populate_data(f):
                 order = parse_order(l)
                 order_list.append(order)
             except:
+                print l
+                print l.decode('string_escape')
                 logging.error(traceback.format_exc())
                 continue
     return order_list

@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --inline --hot --quiet --host 0.0.0.0",
+    "dev": "webpack-dev-server --inline --hot --quiet",
     "build": "rm -rf build/* && webpack --progress --hide-modules --config webpack.production.js"
   },
   "dependencies": {

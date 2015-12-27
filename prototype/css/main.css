@@ -81,6 +81,10 @@ body {
     padding: 10px;
 }
 
+.order-done h2 {
+    text-align: left;
+}
+
 #contact-detail {
     position: relative;
     margin-top: 1em;
