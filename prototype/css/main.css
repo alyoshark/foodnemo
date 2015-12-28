@@ -201,6 +201,14 @@ footer {
     font-size: 1.2em;
 }
 
+#faq p {
+    font-size: 1.2em;
+}
+
+#faq h3 {
+    text-align: left;
+}
+
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
