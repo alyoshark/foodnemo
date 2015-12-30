@@ -102,7 +102,7 @@ $(function() {
         return false;
     });
 
-    $('.order-done').on('click', function() {
+    $('.order-done').click(function() {
         var dishes = $('.dish-preview')
             .map(gen_dish_payable)
             .filter(function() { return this.count > 0; });
@@ -115,7 +115,7 @@ $(function() {
         return false;
     });
 
-    $('.order-done button').on('click', get_contact_detail);
+    $('#submit-order').on('click', get_contact_detail);
 
     $('.trademark').on('click', function() {
         $('#contact-detail').hide();
