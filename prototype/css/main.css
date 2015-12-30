@@ -14,6 +14,12 @@ body {
     margin-top: 6em;
 }
 
+.recommend {
+    margin-top: -0.5em;
+    margin-bottom: 1em;
+    font-style: italic;
+}
+
 .dish-count {
     width: 2.5em;
     height: 2.5em;
