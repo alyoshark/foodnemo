@@ -10,6 +10,15 @@ body {
     color: white;
 }
 
+#closed-modal .modal-dialog {
+    margin-top: 16em;
+}
+
+#closed-modal .modal-content {
+    background-color: brown;
+    padding: 1.5em;
+}
+
 .main-content {
     margin-top: 6em;
 }

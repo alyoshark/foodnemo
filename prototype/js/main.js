@@ -121,4 +121,6 @@ $(function() {
         $('#contact-detail').hide();
         $('#order-choice').show();
     });
+
+    $('#closed-modal').modal('show');
 })
