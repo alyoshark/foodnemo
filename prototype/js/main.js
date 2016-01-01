@@ -118,9 +118,10 @@ $(function() {
     $('#submit-order').on('click', get_contact_detail);
 
     $('.trademark').on('click', function() {
+        $('.dish-count').val(0);
         $('#contact-detail').hide();
         $('#order-choice').show();
     });
 
-    $('#closed-modal').modal('show');
+    // $('#closed-modal').modal('show');
 })
