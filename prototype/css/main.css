@@ -21,6 +21,7 @@ body {
 
 .main-content {
     margin-top: 6em;
+    min-height: 40em;
 }
 
 .recommend {
