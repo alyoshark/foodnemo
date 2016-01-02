@@ -19,6 +19,11 @@ body {
     padding: 1.5em;
 }
 
+.tagline {
+    margin-left: 2em;
+    color: black;
+}
+
 .main-content {
     margin-top: 6em;
     min-height: 30em;
@@ -217,11 +222,31 @@ footer {
     font-size: 1.2em;
 }
 
+#about-us a {
+    text-decoration: underline;
+}
+
 #faq p {
     font-size: 1.2em;
 }
 
+#faq a {
+    text-decoration: underline;
+}
+
 #faq h3 {
+    text-align: left;
+}
+
+#howitworks p {
+    font-size: 1.2em;
+}
+
+#howitworks a {
+    text-decoration: underline;
+}
+
+#howitworks h3 {
     text-align: left;
 }
 

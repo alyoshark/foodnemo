@@ -36,7 +36,7 @@ $(function() {
             var all_summary = dishes.map(gen_dish_summary).get().join(' '),
                 total_sum = dishes.map(function() { return this.price; }).get().reduce(function(a, b) { return a + b; });
             $('.per-dish').html(all_summary);
-            $('.payable').html('Totoal: $ ' + total_sum.toFixed(2));
+            $('.payable').html('Total: $ ' + total_sum.toFixed(2));
         },
 
         validate_field = function(obj, name, lo_bound, hi_bound) {
