@@ -20,9 +20,10 @@ logging.basicConfig(
 
 
 def parse_order(line):
-    data = json.loads(line.decode('string_escape'))
+    timestamp, data = line.split('|', 1)
+    data = json.loads(data.decode('string_escape'))
     dishes = ', '.join(
-        '%s: (%d - %f)' % (i['name'], i['count'], i['price'])
+        '%s: (%d - %.1f)' % (i['name'], i['count'], i['price'])
         for i in data['dishes']
     )
     contact = data['contact']
@@ -32,7 +33,7 @@ def parse_order(line):
     name = contact['name']
     location = contact['location']
     remark = contact['remark']
-    return (phone, slot, zipcode, name, location, remark, dishes)
+    return (timestamp, phone, slot, zipcode, name, location, remark, dishes)
 
 
 def populate_data(f):

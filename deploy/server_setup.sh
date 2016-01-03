@@ -1,5 +1,5 @@
 apt update
-apt install -y nginx monit
+apt install -y nginx monit gcc libffi-dev libssl-dev
 
 cd /opt
 wget https://repo.continuum.io/miniconda/Miniconda-latest-Linux-x86_64.sh -O miniconda.sh

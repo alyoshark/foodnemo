@@ -21,12 +21,12 @@ def order_writer():
         try:
             conns['sheet'] = conns['book'].worksheet(config.SHEET)
         except gspread.exceptions.WorksheetNotFound:
-            conns['sheet'] = conns['book'].add_worksheet(title=config.SHEET, rows='500', cols='8')
+            conns['sheet'] = conns['book'].add_worksheet(title=config.SHEET, rows='500', cols='10')
 
     # @retry(wait_exponential_multiplier=1000, wait_exponential_max=1000000)
     def dump_order(order_list):
         try:
-            ids = conns['sheet'].col_values(1)
+            ids = [i for i in conns['sheet'].col_values(1) if i != '']
             if ids:
                 maxid, err_offset = 0, 0
                 for i in ids:
@@ -47,12 +47,12 @@ def order_writer():
 
     def write_order(order_id, order):
         conns['sheet'].update_cell(order_id, 1, order_id)
-        for col, val in zip(xrange(2, 9), order):
+        for col, val in zip(xrange(2, 10), order):
             conns['sheet'].update_cell(order_id, col, val)
 
     def order2email(order_list):
         msg = 'Hi,\nBelow are the orders from last aggregation mail:\n\n'
-        msg += '\n'.join('\t'.join(str(i) for i in order) for order in order_list)
+        msg += '\n'.join(' | '.join(str(i) for i in order) for order in order_list)
         return msg
 
     init_conn()

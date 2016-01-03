@@ -2,11 +2,16 @@
 
 set -e
 
-cd "${BASH_SOURCE[0]}"
+cd "$( dirname "${BASH_SOURCE[0]}")"
+
+export PATH=$PATH:/opt/miniconda2/bin
 
 mkdir -p /opt/venv
-/opt/miniconda2/bin/conda create -p /opt/venv/foodnemo python
-source /opt/venv/foodnemo/bin/activate
+
+if [ ! -f /opt/venv/foodnemo/bin/activate ]; then
+    conda create -p /opt/venv/foodnemo python
+fi
+source activate /opt/venv/foodnemo
 
 pip install -r requirements
 cp nginx.conf /etc/nginx/sites-available/foodnemo.com
