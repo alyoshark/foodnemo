@@ -1,16 +1,14 @@
-cd $HOME
-sudo pip install virtualenv
-mkdir -p venv
-python2 -mvirtualenv venv/foodnemo
-source $HOME/venv/foodnemo/bin/activate.csh
+#!/bin/bash
 
-if ( -d foodnemo ) then
-    git clone https://github.com/xch91/foodnemo.git
-fi
+set -e
 
-cd foodnemo
-git pull
+cd "${BASH_SOURCE[0]}"
 
-pip install -r deploy/requirements
+mkdir -p /opt/venv
+/opt/miniconda2/bin/conda create -p /opt/venv/foodnemo python
+source /opt/venv/foodnemo/bin/activate
 
-mkdir -p raw static
+pip install -r requirements
+cp nginx.conf /etc/nginx/sites-available/foodnemo.com
+ln -s /etc/nginx/sites-{available,enabled}/foodnemo.com
+nginx -s reload

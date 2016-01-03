@@ -1,10 +1,16 @@
-sudo pkg install gmake git
+apt update
+apt install -y nginx monit
 
-curl -k https://openresty.org/download/ngx_openresty-1.9.3.2.tar.gz | tar xf -
-cd ngx_openresty-1.9.3.2
-./configure
-gmake && sudo gmake install
+cd /opt
+wget https://repo.continuum.io/miniconda/Miniconda-latest-Linux-x86_64.sh -O miniconda.sh
+bash miniconda.sh -b -p /opt/miniconda2
 
-sudo ln -s /usr/local/openresty/nginx/sbin/nginx /sbin/nginx
-sudo ln -s /usr/local/openresty/bin/resty /bin/resty
-sudo ln -s /usr/local/openresty/luajit/bin/luajit-2.1.0-beta1 /bin/luajit
+MONITRC=/etc/monit/monitrc
+sed -i 's/set daemon 120/set daemon 10/g' $MONITRC
+httpd_opened=`grep '^set httpd' $MONITRC | wc -l`
+if [ $httpd_opened -eq 0 ]; then
+    echo "set httpd port 2812 and
+        use address localhost
+        allow localhost
+    " >> $MONITRC
+fi
