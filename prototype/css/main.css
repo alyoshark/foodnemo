@@ -49,8 +49,8 @@ body {
 }
 
 .dish-pic {
-    width: 22em;
-    height: 22em;
+    width: auto;
+    height: 20.5em;
     border-top: 7em;
     margin-bottom: 0.7em;
     display: block;
@@ -141,6 +141,7 @@ body {
 }
 
 .quantity-line {
+    padding: 0 0.5em 0 1em;
     font-weight: 900;
 }
 
