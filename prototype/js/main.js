@@ -108,7 +108,7 @@ $(function() {
             .filter(function() { return this.count > 0; });
         if (dishes.length > 0) {
             $('#order-choice').hide();
-            $('#contact-detail').show();
+            $('#contact-detail').show().offset().top;
             order_detail.dishes = dishes.get();
             gen_all(dishes);
         }
@@ -118,9 +118,10 @@ $(function() {
     $('#submit-order').on('click', get_contact_detail);
 
     $('.trademark').on('click', function() {
-        $('.dish-count').val(0);
-        $('#contact-detail').hide();
-        $('#order-choice').show();
+        location.reload();
+        // $('.dish-count').val(0);
+        // $('#contact-detail').hide();
+        // $('#order-choice').show();
     });
 
     // $('#closed-modal').modal('show');
