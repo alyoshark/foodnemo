@@ -108,6 +108,7 @@ $(function() {
             .filter(function() { return this.count > 0; });
         if (dishes.length > 0) {
             $('#order-choice').hide();
+            $('body').scrollTop();
             $('#contact-detail').show().offset().top;
             order_detail.dishes = dishes.get();
             gen_all(dishes);
