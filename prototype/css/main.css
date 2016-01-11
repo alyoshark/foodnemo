@@ -82,15 +82,15 @@ body {
 }
 
 .normal {
-    background-image: url('/img/luroufan.png');
+    background-image: url('/img/nml.jpg');
     background-size: 100%;
 }
 .halal {
-    background-image: url('/img/penyet-wing.png');
+    background-image: url('/img/hal.jpg');
     background-size: 100%;
 }
 .vegie {
-    background-image: url('/img/vegan-noodle.png');
+    background-image: url('/img/veg.jpg');
     background-size: 100%;
 }
 
