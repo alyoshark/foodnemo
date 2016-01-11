@@ -81,6 +81,7 @@ $(function() {
                     // console.log(data);
                     $('.order-done').html('<h2 class="pulled-left">&#10004; Sent</h2>');
                     alert("Thank you! You've successfully placed your order :)");
+                    window.location.reload();
                 }).fail(function(jq, status) {
                     console.log(jq, status);
                     alert("Sorry, we are having some technical issues, please come back in a while");
@@ -110,6 +111,7 @@ $(function() {
             $('#order-choice').hide();
             $('body').scrollTop();
             $('#contact-detail').show().offset().top;
+            $('body').scrollTop(0);
             order_detail.dishes = dishes.get();
             gen_all(dishes);
         }
