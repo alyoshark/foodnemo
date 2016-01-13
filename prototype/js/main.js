@@ -127,5 +127,5 @@ $(function() {
         // $('#order-choice').show();
     });
 
-    // $('#closed-modal').modal('show');
+    $('#closed-modal').modal('show');
 })
