@@ -1,14 +1,6 @@
 import csv
 import json
-import logging
 import datetime as dt
-
-import config
-
-logging.basicConfig(
-    filename=config.LOGFILE,
-    level=config.LOGLEVEL,
-)
 
 
 def parse_order(line):
@@ -41,7 +33,6 @@ def populate_data(f):
             except:
                 print l
                 print l.decode('string_escape')
-                logging.error(traceback.format_exc())
                 continue
     return order_list
 
