@@ -11,9 +11,9 @@ def parse_order(line):
         for i in data['dishes']
     )
     contact = data['contact']
-    phone = int(contact['phone'])
-    slot = int(contact['slot'])
-    zipcode = int(contact['zipcode'])
+    phone = str(int(contact['phone']))
+    slot = str(int(contact['slot']))
+    zipcode = str(int(contact['zipcode']))
     name = contact['name']
     location = contact['location']
     remark = contact['remark']
@@ -43,7 +43,7 @@ def main(file_log):
     with open('/opt/proj/foodnemo/private/today.csv', 'w') as f:
         cw = csv.writer(f)
         for i in order_list:
-            cw.writerow(i)
+            cw.writerow([c.encode('utf-8') for c in i])
 
 
 if __name__ == '__main__':

@@ -78,13 +78,15 @@ $(function() {
                     data: JSON.stringify(order_detail),
                     contentType: "application/json",
                 }).done(function() { // data, status, jq) {
+                    $('#contact-detail').hide();
+                    $('#thankyou').show();
                     // console.log(data);
-                    $('.order-done').html('<h2 class="pulled-left">&#10004; Sent</h2>');
-                    alert("Thank you! You've successfully placed your order :)");
-                    window.location.reload();
+                    // $('.order-done').html('<h2 class="pulled-left">&#10004; Sent</h2>');
+                    // window.alert("Thank you! You've successfully placed your order :)");
+                    // window.location.reload();
                 }).fail(function(jq, status) {
-                    console.log(jq, status);
-                    alert("Sorry, we are having some technical issues, please come back in a while");
+                    // console.log(jq, status);
+                    window.alert("Sorry, we are having some technical issues, please come back in a while");
                 });
             }
         };
@@ -127,5 +129,5 @@ $(function() {
         // $('#order-choice').show();
     });
 
-    $('#closed-modal').modal('show');
+    // $('#closed-modal').modal('show');
 })
