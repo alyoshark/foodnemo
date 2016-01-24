@@ -10,6 +10,10 @@ body {
     color: white;
 }
 
+a {
+    text-decoration: underline;
+}
+
 #closed-modal .modal-dialog {
     margin-top: 16em;
 }
@@ -37,6 +41,7 @@ body {
 .main-content {
     margin-top: 4em;
     min-height: 30em;
+    max-width: 1020px;
 }
 
 .recommend {
@@ -82,15 +87,15 @@ body {
 }
 
 .normal {
-    background-image: url('/img/nml.jpg');
+    background-image: url('https://lh6.googleusercontent.com/lALSeu3N4idFnCspEsrahBSHq2QmfAgIDF6s3_iFxaj6SasFQqAtMHX5q3rPWANNYCB9bA');
     background-size: 100%;
 }
 .halal {
-    background-image: url('/img/hal.jpg');
+    background-image: url('https://lh6.googleusercontent.com/bFmD1CTbIJ5wGzVtFIBALnafjyyIuCIBWFdMGE7qjwG_N5rzfs7PHfywpsZkBEVd6sOL-Q');
     background-size: 100%;
 }
 .vegie {
-    background-image: url('/img/veg.jpg');
+    background-image: url('https://lh3.googleusercontent.com/0Xv8-FMCu_7THgoad3HXZY3Cna6jPG9_bRuWFyXAzjjAHx8_iHBx2mrYOUUmA1xc429hdg');
     background-size: 100%;
 }
 
@@ -155,6 +160,7 @@ body {
     font-size: 1.5em;
     color: white;
     font-weight: 900;
+    text-decoration: none;
 }
 
 .quantity-line input {
@@ -217,6 +223,10 @@ footer span, a {
     color: white;
 }
 
+footer a {
+    text-decoration: none;
+}
+
 footer a:hover {
     text-decoration: none;
     color: gray;
@@ -231,16 +241,8 @@ footer {
     font-size: 1.2em;
 }
 
-#about-us a {
-    text-decoration: underline;
-}
-
 #faq p {
     font-size: 1.2em;
-}
-
-#faq a {
-    text-decoration: underline;
 }
 
 #faq h3 {
@@ -249,10 +251,6 @@ footer {
 
 #howitworks ol {
     font-size: 1.2em;
-}
-
-#howitworks a {
-    text-decoration: underline;
 }
 
 #howitworks h3 {
