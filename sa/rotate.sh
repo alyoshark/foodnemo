@@ -18,3 +18,5 @@ kill -USR1 `cat /run/nginx.pid`
 
 gzip $test_rot
 gzip $prod_rot
+
+cd ../prototype/js/ && cp main-pulled.js main.js

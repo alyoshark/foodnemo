@@ -2,6 +2,7 @@ import csv
 import json
 import datetime as dt
 
+TODAY = (dt.datetime.now() + dt.timedelta(hours=13)).date().strftime('%Y%m%d')
 
 def parse_order(line):
     timestamp, data = line.split('|', 1)
@@ -40,7 +41,7 @@ def populate_data(f):
 def main(file_log):
     with open(file_log) as f:
         order_list = populate_data(f)
-    with open('/opt/proj/foodnemo/private/today.csv', 'w') as f:
+    with open('/opt/proj/foodnemo/private/%s.csv' % TODAY, 'w') as f:
         cw = csv.writer(f)
         for i in order_list:
             cw.writerow([c.encode('utf-8') for c in i])
