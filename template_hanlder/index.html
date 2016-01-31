@@ -41,23 +41,27 @@
     <div class="modal" id="closed-modal" role="dialog" data-backdrop="static" data-keyboard="false">
       <div class="modal-dialog">
         <div class="modal-content">
-          <h3 class="modal-title">Sorry, our booking hour is from 9am to 11am</h3>
-          <h4 class="modal-title">Please come back again tomorrow :)</h4>
+          <h3 class="modal-title">Our ordering time ends at 11am.</h3>
+          <h4 class="modal-title">Please come back on tomorrow.</h4>
+          <h4 class="modal-title">Have a good day :)</h4>
         </div>
       </div>
     </div>
 
     <div class="container main-content" id="order-choice">
       <div>
-        <h2 class="recommend">Wednesday's (13/1) Recommendation:</h2>
+        <h2 class="recommend">Welcome to Food Nemo!</h2>
+        <h4>New menu everyday. We pick and deliver nothing but the SHIOKest food to you.</h4>
+        <h4>No minimum order. No high delivery charge.</h4>
+        <h4>Here's what we have for you today:<br><br></h4>
       </div>
       <div class="row">
         <div class="dish-preview col-md-4">
           <div class="dish-pic normal img-responsive">
-            <span class="dish-name">Jap Chicken Katsu</span>
+            <span class="dish-name">{{ info.dishes.nml.name }}</span>
           </div>
           <div class="quantity-line row">
-            <span class="price pull-left">$ 4.00</span>
+            <span class="price pull-left">$ {{ info.dishes.nml.price }}</span>
             <div class="pull-right">
               <a class="btn minus1" href="#" role="button">–</a>
               <input type="text" value="0" min="0" class="dish-count">
@@ -67,11 +71,11 @@
         </div>
         <div class="dish-preview col-md-4">
           <div class="dish-pic halal img-responsive">
-            <span class="dish-name">Indo Grilled Chicken Leg</span>
+            <span class="dish-name">{{ info.dishes.hal.name }}</span>
             <span class="dish-type">Halal</span>
           </div>
           <div class="quantity-line row">
-            <span class="price pull-left">$ 4.00</span>
+            <span class="price pull-left">$ {{ info.dishes.hal.price }}</span>
             <div class="pull-right">
               <a class="btn minus1" href="#" role="button">–</a>
               <input type="text" value="0" min="0" class="dish-count">
@@ -81,11 +85,11 @@
         </div>
         <div class="dish-preview col-md-4">
           <div class="dish-pic vegie img-responsive">
-            <span class="dish-name">Special Vegan Set</span>
+            <span class="dish-name">{{ info.dishes.veg.name }}</span>
             <span class="dish-type">Vegan</span>
           </div>
           <div class="quantity-line row">
-            <span class="price pull-left">$ 3.50</span>
+            <span class="price pull-left">$ {{ info.dishes.veg.price }}</span>
             <div class="pull-right">
               <a class="btn minus1" href="#" role="button">–</a>
               <input type="text" value="0" min="0" class="dish-count">
@@ -96,9 +100,7 @@
       </div>
 
       <div class="row order-done text-center">
-        <div class="">
           <button class="btn btn-danger">ORDER</button>
-        </div>
       </div>
 
       <div class="row how-to text-center">
@@ -154,9 +156,9 @@
                 <label class="radio-inline" for="Delivery Time-0">
                   <input type="radio" name="deliver-time" id="slot0" value="0" checked="checked">12 pm to 1 pm
                 </label>
-                <label class="radio-inline" for="slot1">
+                <!--label class="radio-inline" for="slot1">
                   <input type="radio" name="deliver-time" id="Delivery Time-1" value="1">1 pm to 2 pm
-                </label>
+                </label-->
               </div>
             </div>
 
@@ -190,8 +192,17 @@
       </div>
 
       <div class="row how-to text-center">
-        <p class="small">* Cash on delivery.</p>
-        <p class="small">* Appreciate if you could have the exact amount ready.</p>
+        <p class="small">* Use <a href="http://goo.gl/forms/HgSNolqqvZ">this form</a> if you face any problem in placing order, or <a href="mailto:foodnemo@gmail.com">drop us an email</a>.</p>
+        <p class="small">* Cash on delivery. Appreciate if you could have the exact amount ready.</p>
+      </div>
+
+    </div> <!-- /container -->
+
+
+    <div class="container main-content" id="thankyou">
+
+      <div class="text-center">
+        <h2>Thank you! You've successfully placed your order :)</h2>
       </div>
 
     </div> <!-- /container -->
@@ -221,7 +232,7 @@
        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
        e.src='//www.google-analytics.com/analytics.js';
        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-     ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+     ga('create','UA-72547626-1','auto');ga('send','pageview');
     </script-->
   </body>
 </html>

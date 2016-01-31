@@ -1,0 +1,264 @@
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+body {
+    background-image: url('/img/background.png');
+    background-size: 100%;
+    color: white;
+}
+
+a {
+    text-decoration: underline;
+}
+
+#closed-modal .modal-dialog {
+    margin-top: 16em;
+}
+
+#closed-modal .modal-content {
+    background-color: brown;
+    padding: 1.5em;
+}
+
+.navbar-header {
+    margin-top: 5px;
+}
+
+@media screen and (min-width: 700px) {
+    .trademark {
+        padding-left: 10vw;
+    }
+}
+
+.tagline {
+    margin-left: 2em;
+    color: black;
+}
+
+.main-content {
+    margin-top: 4em;
+    min-height: 30em;
+    max-width: 1020px;
+}
+
+.recommend {
+    margin-top: -0.5em;
+    margin-bottom: 1em;
+    font-style: italic;
+}
+
+.dish-count {
+    width: 2.5em;
+    height: 2.5em;
+}
+
+.dish-pic {
+    width: auto;
+    height: 20.5em;
+    border-top: 7em;
+    margin-bottom: 0.7em;
+    display: block;
+    position: relative;
+}
+
+.dish-preview .dish-name {
+    background: #986124;
+    font-size: 1.4em;
+    font-weight: 900;
+    color: #EEEEEE;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 6px;
+}
+
+.dish-preview .dish-type {
+    font-size: 1.5em;
+    font-weight: 900;
+    color: #FFFFFF;
+    background: #C12E2A;
+    font-style: italic;
+    position: absolute;
+    right: 0;
+    padding: 5px;
+}
+
+.normal {
+    background-image: url({{ info.dishes.nml.img }});
+    background-size: 100%;
+}
+.halal {
+    background-image: url({{ info.dishes.hal.img }});
+    background-size: 100%;
+}
+.vegie {
+    background-image: url({{ info.dishes.veg.img }});
+    background-size: 100%;
+}
+
+
+.total-cost {
+    font-size: 1.5em;
+    margin-right: 1.2em;
+    border-top: 0.2em;
+    font-weight: 900;
+}
+
+.order-done {
+    margin-top: 1em;
+}
+
+.order-done button {
+    font-weight: 900;
+    font-size: 1.5em;
+    padding: 10px 28px;
+    border-radius: 15px;
+}
+
+.order-done h2 {
+    text-align: left;
+}
+
+#contact-detail {
+    display: none;
+}
+
+#contact-detail textarea {
+    font-size: 1.3em;
+}
+
+#order-choice {
+    display: inherit;
+}
+
+#thankyou {
+    display: none;
+}
+
+.price {
+    margin-top: 0.3em;
+    font-size: 1.5em;
+}
+
+.dish-preview {
+    position: relative;
+}
+
+.slogan {
+    margin-top: 15px;
+}
+
+.quantity-line {
+    padding: 0 0.5em 0 1em;
+    font-weight: 900;
+}
+
+.quantity-line a {
+    font-size: 1.5em;
+    color: white;
+    font-weight: 900;
+    text-decoration: none;
+}
+
+.quantity-line input {
+    font-size: 1.2em;
+    color: red;
+    padding: 1px;
+    width: 2em;
+    height: 2em;
+    border: none;
+    text-align: center;
+}
+
+.form-group label {
+    font-size: 1.5em;
+    padding-bottom: 8px;
+}
+
+.order-summary {
+    font-size: 1.2em;
+    margin-top: -0.6em;
+}
+
+.order-summary
+h1, h2, h3, h4 {
+    text-align: center;
+    font-weight: 900;
+}
+
+.order-detail {
+    background: rgba(211, 211, 211, 0.5);
+    display: block;
+    color: white;
+    font-size: 1.2em;
+    font-weight: 900;
+    padding: 1em 1em 2.5em 1em;
+    border-radius: 5px;
+}
+
+.with-errors li {
+    color: darkred;
+    font-size: 1.2em;
+    padding-left: 1em;
+}
+
+.how-to {
+    margin-top: 1.5em;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.how-to h3 {
+    margin-left: -1.5em;
+}
+
+.how-to p {
+    margin-bottom: 0;
+}
+
+footer span, a {
+    color: white;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: none;
+    color: gray;
+}
+
+footer {
+    margin-top: -0.7em;
+    font-weight: 800;
+}
+
+#about-us p {
+    font-size: 1.2em;
+}
+
+#faq p {
+    font-size: 1.2em;
+}
+
+#faq h3 {
+    text-align: left;
+}
+
+#howitworks ol {
+    font-size: 1.2em;
+}
+
+#howitworks h3 {
+    text-align: left;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
