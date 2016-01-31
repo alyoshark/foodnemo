@@ -28,4 +28,6 @@ def main():
 
 
 if __name__ == '__main__':
-    print main()
+    import pprint
+    pp = pprint.PrettyPrinter(indent=4)
+    pp.pprint(main())

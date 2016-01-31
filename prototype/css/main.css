@@ -50,6 +50,10 @@ a {
     font-style: italic;
 }
 
+.alert {
+    color: maroon;
+}
+
 .dish-count {
     width: 2.5em;
     height: 2.5em;
@@ -87,15 +91,15 @@ a {
 }
 
 .normal {
-    background-image: url('https://lh5.googleusercontent.com/k4DI1sKcQLhx5sGjeA8QynMAGy2WtkIh16ZXHIumr3RJPxSDjXGMe73Wpruk-zNykOeNUg');
+    background-image: url('https://lh4.googleusercontent.com/ewErDNUPh7wuxfhVtj5wr3gjp6ot31pKKO8i73sJXBwA1VBcdjZdLfzHY-uI2SNW_xI_Vw');
     background-size: 100%;
 }
 .halal {
-    background-image: url('https://lh5.googleusercontent.com/s2NWZz1DT7UrRGU-ysN55Zo8iCg08zYeshMlGSisQyYt8QsJPXyk0ep_w_mEp2EfL_JG3g');
+    background-image: url('https://lh6.googleusercontent.com/rZsepw3PtYsrvWXxymVSpbqihZON4AvDoMzjl04XADC0nY2C93_SSzO8_xiR5k2kwWATkw');
     background-size: 100%;
 }
 .vegie {
-    background-image: url('https://lh4.googleusercontent.com/rrwX3U53qReR6F_fOVtcW-RZhisVnkPoS1v5qk6tM8kAptD4M9qpFspWr_MvGPL4T3GJNQ');
+    background-image: url('https://lh3.googleusercontent.com/aOpoUpq9PlmxB6CdkrtcVH-VWoNrnH4G4G0tKo_kNXXymO0YnojMrZ1pjEccoZ47izDsJg');
     background-size: 100%;
 }
 
