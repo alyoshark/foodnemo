@@ -261,6 +261,23 @@ footer {
     text-align: left;
 }
 
+#career p {
+    font-size: 1.3em;
+}
+
+#career dl, #career dt, #career dd {
+    font-size: 1.1em;
+}
+
+#career dd {
+    display: list-item;
+    margin-left: 2em;
+}
+
+#career dt {
+    margin-top: 1em;
+}
+
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
