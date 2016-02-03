@@ -50,6 +50,10 @@ a {
     font-style: italic;
 }
 
+.alert {
+    color: maroon;
+}
+
 .dish-count {
     width: 2.5em;
     height: 2.5em;
@@ -219,6 +223,11 @@ h1, h2, h3, h4 {
     margin-bottom: 0;
 }
 
+.how-to .gg-form {
+    font-size: 120%;
+    color: darkred;
+}
+
 footer span, a {
     color: white;
 }
@@ -255,6 +264,23 @@ footer {
 
 #howitworks h3 {
     text-align: left;
+}
+
+#career p {
+    font-size: 1.3em;
+}
+
+#career dl, #career dt, #career dd {
+    font-size: 1.1em;
+}
+
+#career dd {
+    display: list-item;
+    margin-left: 2em;
+}
+
+#career dt {
+    margin-top: 1em;
 }
 
 input[type=number]::-webkit-inner-spin-button,

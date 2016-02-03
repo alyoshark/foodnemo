@@ -17,7 +17,7 @@ def objectify_dishes(dish_list):
     return result
 
 
-def main():
+def get_dishes():
     raw = r.get(FORM_URL)
     soup = bs(raw.text, 'html.parser')
     dish_imgs = [i['src'] for i in soup.findAll('img', {'class': IMG_CLASS})]
@@ -30,4 +30,4 @@ def main():
 if __name__ == '__main__':
     import pprint
     pp = pprint.PrettyPrinter(indent=4)
-    pp.pprint(main())
+    pp.pprint(get_dishes())

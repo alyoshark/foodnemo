@@ -91,15 +91,15 @@ a {
 }
 
 .normal {
-    background-image: url('https://lh4.googleusercontent.com/ewErDNUPh7wuxfhVtj5wr3gjp6ot31pKKO8i73sJXBwA1VBcdjZdLfzHY-uI2SNW_xI_Vw');
+    background-image: url(https://lh5.googleusercontent.com/AKibak8BDUOv9PQEGnBDWNkgdPscmUjgBchifokOrTMWjyW7LrhTK3s8AZPZgKOyk0X1eA);
     background-size: 100%;
 }
 .halal {
-    background-image: url('https://lh6.googleusercontent.com/rZsepw3PtYsrvWXxymVSpbqihZON4AvDoMzjl04XADC0nY2C93_SSzO8_xiR5k2kwWATkw');
+    background-image: url(https://lh4.googleusercontent.com/rf8U3kW8CGDvyqJh9pPCgyrIH4_5seqYMjM7pRjCvo6Dl5zk-i96B3AzP-xxsGGT2Bk5_g);
     background-size: 100%;
 }
 .vegie {
-    background-image: url('https://lh3.googleusercontent.com/aOpoUpq9PlmxB6CdkrtcVH-VWoNrnH4G4G0tKo_kNXXymO0YnojMrZ1pjEccoZ47izDsJg');
+    background-image: url(https://lh5.googleusercontent.com/XLf4yesLO2kYhN3F7iGng4TdB_7747wpzMywDXP_6rQ_nWjetc1z9D7qY3JSZGnoWCPTuA);
     background-size: 100%;
 }
 
@@ -221,6 +221,11 @@ h1, h2, h3, h4 {
 
 .how-to p {
     margin-bottom: 0;
+}
+
+.how-to .gg-form {
+    font-size: 120%;
+    color: darkred;
 }
 
 footer span, a {
