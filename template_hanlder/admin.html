@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+  <title>Admin Backend</title>
+  <style>
+    input[type=text] {
+      display: block;
+    }
+    a {
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <form action="/generate" method="post">
+      Mask:<br>
+    <input type="radio" name="is_closed" value="0" checked="checked">Closed
+    <input type="radio" name="is_closed" value="1">Open
+    <br><br>
+    Message: &nbsp;
+    <a href="javascript:add_msg();" id="add-msg"> + </a>
+    &nbsp;
+    &nbsp;
+    <a href="javascript:rem_msg();" id="rem-msg"> - </a>
+    <input type="text" name="msg" class="msg">
+    <br>
+    <button type="submit" id="submit">Generate</button>
+  </form>
+  <br>
+  <script>
+    function add_msg() {
+      var msgs = msgs = document.getElementsByClassName('msg');
+      var last_msg = msgs[msgs.length - 1];
+      var new_msg = document.createElement('input');
+      new_msg.setAttribute("type", "text");
+      new_msg.setAttribute("name", "msg");
+      new_msg.setAttribute("class", "msg");
+      last_msg.parentNode.insertBefore(new_msg, last_msg.nextSibling);
+    }
+    function rem_msg() {
+      var msgs = msgs = document.getElementsByClassName('msg');
+      if (msgs.length <= 1) return;
+      var last_msg = msgs[msgs.length - 1];
+      last_msg.parentNode.removeChild(last_msg);
+    }
+  </script>
+</body>
+</html>

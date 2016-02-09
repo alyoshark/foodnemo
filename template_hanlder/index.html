@@ -41,9 +41,9 @@
     <div class="modal" id="closed-modal" role="dialog" data-backdrop="static" data-keyboard="false">
       <div class="modal-dialog">
         <div class="modal-content">
-          <h3 class="modal-title">Our ordering time ends at 11am.</h3>
-          <h4 class="modal-title">Please come back on tomorrow.</h4>
-          <h4 class="modal-title">Have a good day :)</h4>
+          {% for msg in info.mask_msg %}
+            <h4 class="modal-title">{{ msg }}</h4>
+          {% endfor %}
         </div>
       </div>
     </div>

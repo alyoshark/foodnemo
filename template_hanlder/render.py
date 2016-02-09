@@ -30,10 +30,11 @@ def main():
     info = {
         'dishes': get_dishes(),
         'is_closed': sys.argv[1]=='closed',
-        'mask_msg': sys.argv[2],
+        'mask_msg': sys.argv[2].split('|'),
     }
     gen_files('index.html', info)
     gen_files('css/main.css', info)
+    gen_files('js/main.js', info)
 
 
 if __name__ == '__main__':

@@ -129,5 +129,7 @@ $(function() {
         // $('#order-choice').show();
     });
 
+    {% if info.is_closed %}
     $('#closed-modal').modal('show');
+    {% endif %}
 })
