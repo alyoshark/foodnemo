@@ -1,0 +1,1 @@
+cd ~/mydev/ && rsync -avz --exclude=*.pyc --exclude=foodnemo/.git --exclude=foodnemo/assets foodnemo root@foodnemo:/opt/proj/

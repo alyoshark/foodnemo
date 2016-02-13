@@ -12,7 +12,7 @@
   </style>
 </head>
 <body>
-  <form action="/generate" method="post">
+  <form action="/private/generate" method="post">
       Mask:<br>
     <input type="radio" name="is_closed" value="0" checked="checked">Closed
     <input type="radio" name="is_closed" value="1">Open
@@ -22,7 +22,9 @@
     &nbsp;
     &nbsp;
     <a href="javascript:rem_msg();" id="rem-msg"> - </a>
-    <input type="text" name="msg" class="msg">
+    <input type="text" name="msg" class="msg" value="Our order service closes at 11am.">
+    <input type="text" name="msg" class="msg" value="Please come back again tomorrow.">
+    <input type="text" name="msg" class="msg" value="Have a good day :)">
     <br>
     <button type="submit" id="submit">Generate</button>
   </form>
