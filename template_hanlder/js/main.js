@@ -122,6 +122,24 @@ $(function() {
 
     $('#submit-order').on('click', get_contact_detail);
 
+    $('#submit-problem').on('click', function() {
+        $("html, body").animate({ scrollTop: $(document).height() });
+        $('.help-msg').each(function() {
+            var elem = $(this);
+            var interval = setInterval(function() {
+                if (elem.css('visibility') == 'hidden') {
+                    elem.css('visibility', 'visible');
+                } else {
+                    elem.css('visibility', 'hidden');
+                }    
+            }, 50);
+            setTimeout(function () {
+                clearInterval(interval);
+                elem.css('visibility', 'visible');
+            }, 1000);
+        });
+    });
+
     $('.trademark').on('click', function() {
         location.reload();
         // $('.dish-count').val(0);

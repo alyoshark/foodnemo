@@ -118,7 +118,8 @@ a {
 .order-done button {
     font-weight: 900;
     font-size: 1.5em;
-    padding: 10px 28px;
+    width: 8em;
+    height: 2.5em;
     border-radius: 15px;
 }
 
@@ -203,6 +204,13 @@ h1, h2, h3, h4 {
     border-radius: 5px;
 }
 
+#submit-problem {
+    margin-top: 3em;
+    text-decoration: underline;
+    color: darkred;
+    cursor: pointer;
+}
+
 .with-errors li {
     color: darkred;
     font-size: 1.2em;
@@ -224,7 +232,7 @@ h1, h2, h3, h4 {
 }
 
 .how-to .gg-form {
-    font-size: 120%;
+    font-size: 103%;
     color: darkred;
 }
 
