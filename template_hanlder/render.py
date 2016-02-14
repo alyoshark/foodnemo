@@ -53,6 +53,7 @@ def main(logline):
                 'is_closed': data['is_closed'][0] != '0',
                 'mask_msg': msg,
             }
+            print info
             gen_files('index.html', info)
             gen_files('css/main.css', info)
             gen_files('js/main.js', info)
