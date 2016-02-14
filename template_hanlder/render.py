@@ -50,7 +50,7 @@ def main(logline):
         if msg:
             info = {
                 'dishes': get_dishes(),
-                'is_closed': data['is_closed'][0] != 0,
+                'is_closed': data['is_closed'][0] != '0',
                 'mask_msg': msg,
             }
             gen_files('index.html', info)
