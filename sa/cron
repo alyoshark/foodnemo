@@ -1,5 +1,5 @@
 0 11 * * * root bash /opt/proj/foodnemo/sa/rotate.sh
 # * * * * * root bash /opt/proj/foodnemo/sa/check.sh
 * * * * * root python /opt/proj/foodnemo/api/adhoc_parser.py
+* * * * * root cd /opt/proj/foodnemo/template_hanlder && bash main.sh
 * * * * * root date > /tmp/croncheck
-30 23 * * * root bash /root/mask.sh

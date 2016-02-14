@@ -44,7 +44,7 @@ def main(logline):
     timenow = dt.datetime.now()
     timethen = dt.datetime.strptime(time_str.split('+')[0], '%Y-%m-%dT%H:%M:%S')
     if (timenow - timethen).seconds <= 60:
-        data = urlparse.parse_qs(query_str)
+        data = parse_qs(query_str)
         msg = [m for m in data['msg'] if m and len(m) > 0]
         # {'msg': ['We would resume on Feb 15', 'Please join us then :)'], 'is_closed': ['0']}
         if msg:
