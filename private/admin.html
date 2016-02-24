@@ -18,25 +18,34 @@
     <input type="radio" name="is_closed" value="1">Open
     <br><br>
     Message: &nbsp;
-    <a href="javascript:add_msg();" id="add-msg"> + </a>
+    <a href="javascript:add_msg('msg');"> + </a>
     &nbsp;
     &nbsp;
-    <a href="javascript:rem_msg();" id="rem-msg"> - </a>
-    <input type="text" name="msg" class="msg" value="Our order service closes at 11am.">
+    <a href="javascript:rem_msg('msg');"> - </a>
+    <input type="text" name="msg" class="msg" value="Our daily ordering hour is between 6am - 11am.">
     <input type="text" name="msg" class="msg" value="Please come back again tomorrow.">
     <input type="text" name="msg" class="msg" value="Have a good day :)">
+    <br><br>
+    Introduction: &nbsp;
+    <a href="javascript:add_msg('intro');"> + </a>
+    &nbsp;
+    &nbsp;
+    <a href="javascript:rem_msg('intro');"> - </a>
+    <input type="text" name="intro" class="intro" value="New menu everyday. We pick and deliver nothing but the SHIOKest food to you.">
+    <input type="text" name="intro" class="intro" value="No minimum order. No high delivery charge.">
+    <input type="text" name="intro" class="intro" value="Here's what we have for you today:">
     <br>
     <button type="submit" id="submit">Generate</button>
   </form>
   <br>
   <script>
-    function add_msg() {
-      var msgs = msgs = document.getElementsByClassName('msg');
+    function add_msg(msg_type) {
+      var msgs = msgs = document.getElementsByClassName(msg_type);
       var last_msg = msgs[msgs.length - 1];
       var new_msg = document.createElement('input');
       new_msg.setAttribute("type", "text");
-      new_msg.setAttribute("name", "msg");
-      new_msg.setAttribute("class", "msg");
+      new_msg.setAttribute("name", msg_type);
+      new_msg.setAttribute("class", msg_type);
       last_msg.parentNode.insertBefore(new_msg, last_msg.nextSibling);
     }
     function rem_msg() {

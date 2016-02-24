@@ -46,12 +46,14 @@ def main(logline):
     if (timenow - timethen).seconds <= 60:
         data = parse_qs(query_str)
         msg = [m for m in data['msg'] if m and len(m) > 0]
+        intro = [m for m in data['intro'] if m and len(m) > 0]
         # {'msg': ['We would resume on Feb 15', 'Please join us then :)'], 'is_closed': ['0']}
-        if msg:
+        if msg and intro:
             info = {
                 'dishes': get_dishes(),
                 'is_closed': data['is_closed'][0] != '0',
                 'mask_msg': msg,
+                'intro': intro,
             }
             print info
             gen_files('index.html', info)

@@ -34,7 +34,7 @@
             <img src='/img/foodnemo-dark.png'>
           </a>
         </div>
-        <h3 class="visible-lg tagline">Hand-picked lunch delivered to you</h3>
+        <h3 class="visible-lg tagline">No minimum order. No high delivery charge.</h3>
       </div>
     </nav>
 
@@ -51,9 +51,10 @@
     <div class="container main-content" id="order-choice">
       <div>
         <h2 class="recommend">Welcome to Food Nemo!</h2>
-        <h4>New menu everyday. We pick and deliver nothing but the SHIOKest food to you.</h4>
-        <h4>No minimum order. No high delivery charge.</h4>
-        <h4>Here's what we have for you today:<br></h4>
+        {% for intro in info.intro %}
+          <h4>{{ intro }}</h4>
+        {% endfor %}
+        <h4><br></h4>
       </div>
       <div class="row">
         <div class="dish-preview col-md-4">
