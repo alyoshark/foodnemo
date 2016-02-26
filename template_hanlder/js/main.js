@@ -46,7 +46,7 @@ $(function() {
         validate_contact = function(contact) {
             var has_phone = validate_field(contact, 'phone', 0, 8),
                 has_name = validate_field(contact, 'name', 0, 32),
-                has_location = validate_field(contact, 'location', 0, 32),
+                has_location = validate_field(contact, 'location', 0, 256),
                 has_zip = validate_field(contact, 'zipcode', 0, 6),
                 has_slot = validate_field(contact, 'slot', 0, 1);
             return has_phone && has_name &&
